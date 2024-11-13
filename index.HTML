@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Gaming</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+   
+</head>
+<body>
+    <header class="top-center">
+        <h1><strong>Max Gaming - Home</strong></h1>
+        <nav>
+          <a href="index.html"><button>Home</button></a>
+          <a href="projects.html"><button>Projects</button></a>
+          <a href="contact.html"><button>Contact</button></a>
+        </nav>
+    </header>
+
+    <!-- Theme Toggle Button -->
+    <button class="toggle-theme-btn" onclick="toggleTheme()">Dark Mode</button>
+
+    <section>
+        <h2>About Me:</h2>
+        <div class="about-content">
+          <img src="profile_pic.jpeg" alt="Profile img" class="profile-img">
+          <p>Hi! I'm Max, and I've been into coding and game development since I was 10 years old. I have always loved art and creativity. Please look around the website and enjoy the projects I’ve made.</p>
+      </div>
+    </section>
+    <section>
+        <h2>Max's Gaming Channel</h2>
+        <div class="about-content">
+          <img src="MGC_logo.jpg" alt="logo" class="logo-img">
+          <p>I created Max's Gaming Channel with my dad at six years old. He helped me edit many of my videos. It’s where I post gameplay, Game Devlogs, and much more! Check it out!</p>
+        </div>
+    </section>
+    <section>
+      <h2>Max Gaming</h2>
+      <p>Max Gaming is my company. I make games, apps and art. </p>
+    </section>
+    <footer class="bottom-center">
+        <p>© 2024 Max Gaming</p>
+    </footer>
+
+    <script>
+        // Function to toggle dark mode
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
