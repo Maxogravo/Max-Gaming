@@ -1,0 +1,193 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-center{
+  margin-top: 60px;
+  text-align: centre;
+}
+
+.centre-center {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center
+}
+
+/* Profile Image */
+.profile-img {
+  width: 215px;
+  height: 250px;
+  border-radius: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Logo Image */
+.logo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.about-content {
+  display: flex;  /* Use flexbox to place elements side by side */
+  align-items: center;  /* Vertically center the items */
+  gap: 10x;  /* Add space between the image and the text */
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  flex-grow: 1;  /* Allow the text to take the remaining space */
+}
+
+.profile-img {
+  width: 100px;
+  height: 130px;
+}
+
+.bottom-centre {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* Light and Dark mode colors */
+:root {
+    --bg-color-light: #f4f4f9;
+    --text-color-light: #333;
+    --accent-color-light: #0077cc;
+    --bg-color-dark: #1c1c1e;
+    --text-color-dark: #f1f1f1;
+    --accent-color-dark: #0a84ff;
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --accent-color: var(--accent-color-light);
+}
+
+/* Dark mode toggle */
+.dark-mode {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --accent-color: var(--accent-color-dark);
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header section */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Navbar styling */
+nav {
+    margin-top: 10px;
+}
+
+nav button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav button:hover {
+    background-color: darken(var(--accent-color), 10%);
+    transform: scale(1.05);
+}
+
+/* Content sections */
+section {
+    max-width: 600px;
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h2 {
+    color: var(--accent-color);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    animation: slideIn 0.8s ease-out;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Footer styling */
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Dark mode toggle button */
+.toggle-theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 70px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.toggle-theme-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
